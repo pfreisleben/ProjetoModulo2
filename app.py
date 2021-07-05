@@ -13,3 +13,8 @@ app.secret_key = "chaveOK"
 
 # Cria o objeto SQL Alchemy, passando o app como parametro e vinculando a variavel db.
 db = SQLAlchemy(app)
+
+
+@app.route('/')
+def index():
+    return 'Hello World!'
