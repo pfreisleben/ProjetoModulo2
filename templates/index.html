@@ -5,14 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bestiário - Dungeons & Dragons</title>
-  <link rel="stylesheet" href="../static/styles.css">
-
-  
+  <link rel="stylesheet" href="../static/styles.css">  
 </head>
 <body>
-  <audio src="../static/music/entrada.mp3" class="musica" id="entrada"></audio>
-  <div class="bloco"><img id="logo" src="../static/images/logo.png" alt=""></div>
-  <button onclick="musicaEntrada.play()">Teste</button>
+  <audio src="../static/music/entrada.mp3" muted="true" class="musica" id="entrada"></audio>
+  <div class="bloco" onmouseover="musicaEntrada.play()"><img id="logo" src="../static/images/logo.png" alt=""></div>
   <script src="../static/script.js"></script>
 
 </body>
