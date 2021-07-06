@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+}
+
+.bloco {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
