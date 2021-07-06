@@ -18,12 +18,12 @@ db = SQLAlchemy(app)
 # Id, Nome, Tipo, Nivel de Desafio e Imagem.
 
 
-class Besta(db.Model):
+class Bestas(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nome = db.Column(db.String(255), nullable=False)
     tipo = db.Column(db.String(255), nullable=False)
-    nivelDesafio = db.Column(db.Integer, nullable=False)
-    descricaoGeral = db.Column(db.String(1000), nullable=False)
+    niveldesafio = db.Column(db.Integer, nullable=False)
+    descricaogeral = db.Column(db.String(1000), nullable=False)
     ca = db.Column(db.Integer, nullable=False)
     pv = db.Column(db.Integer, nullable=False)
     deslocamento = db.Column(db.Integer, nullable=False)
@@ -34,12 +34,12 @@ class Besta(db.Model):
     sabedoria = db.Column(db.Integer, nullable=False)
     carisma = db.Column(db.Integer, nullable=False)
 
-    def __init__(self, nome, tipo, nivelDesafio, descricaoGeral, ca, pv, deslocamento, forca,
+    def __init__(self, nome, tipo, niveldesafio, descricaoGeral, ca, pv, deslocamento, forca,
                  destreza, constituicao, inteligencia, sabedoria, carisma):
         self.nome = nome
         self.tipo = tipo
-        self.nivelDesafio = nivelDesafio
-        self.descricaoGeral = descricaoGeral
+        self.niveldesafio = niveldesafio
+        self.descricaogeral = descricaoGeral
         self.ca = ca
         self.pv = pv
         self.deslocamento = deslocamento
@@ -52,15 +52,15 @@ class Besta(db.Model):
 
     @staticmethod
     def read_all():
-        return Besta.query.order_by(Besta.id.asc()).all()
+        return Bestas.query.order_by(Bestas.id.asc()).all()
 
     @staticmethod
     def read_single(id_registro):
-        return Besta.query.get(id_registro)
+        return Bestas.query.get(id_registro)
 
     @staticmethod
     def conta():
-        return Besta.query.count()
+        return Bestas.query.count()
 
     def save(self):
         db.session.add(self)
@@ -71,7 +71,7 @@ class Besta(db.Model):
                novo_sabedoria, novo_carisma):
         self.nome = novo_nome
         self.tipo = novo_tipo
-        self.nivelDesafio = novo_nivelDesafio
+        self.niveldesafio = novo_nivelDesafio
         self.descricaoGeral = novo_descricaoGeral
         self.ca = novo_ca
         self.pv = novo_pv
@@ -92,19 +92,19 @@ class Besta(db.Model):
 
 @app.route('/')
 def index():
-    total = Besta.conta()
+    total = Bestas.conta()
     return render_template('index.html', total=total)
 
 
 @app.route("/read")
 def read_all():
-    registros = Besta.read_all()
+    registros = Bestas.read_all()
     return render_template("read_all.html", registros=registros)
 
 
 @app.route("/read/<id_registro>")
 def read_id(id_registro):
-    registro = Besta.read_single(id_registro)
+    registro = Bestas.read_single(id_registro)
     return render_template("read_single.html", registro=registro)
 
 
@@ -115,7 +115,7 @@ def create():
     if request.method == 'POST':
 
         form = request.form
-        registro = Besta(form['nome'], form['imagem_url'])
+        registro = Bestas(form['nome'], form['imagem_url'])
         registro.save()
         novo_id = registro.id
 
@@ -126,7 +126,7 @@ def create():
 def update(id_registro):
     sucesso = False
 
-    registro = Besta.read_single(id_registro)
+    registro = Bestas.read_single(id_registro)
 
     if request.method == 'POST':
         form = request.form
@@ -140,7 +140,7 @@ def update(id_registro):
 
 @app.route('/delete/<id_registro>')
 def delete(id_registro):
-    registro = Besta.read_single(id_registro)
+    registro = Bestas.read_single(id_registro)
     return render_template("delete.html", registro=registro)
 
 
@@ -148,7 +148,7 @@ def delete(id_registro):
 def delete_confirmed(id_registro):
     sucesso = False
 
-    registro = Besta.read_single(id_registro)
+    registro = Bestas.read_single(id_registro)
 
     if registro:
         registro.delete()
