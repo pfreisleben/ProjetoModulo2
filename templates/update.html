@@ -9,6 +9,12 @@
 </head>
 <body>
     {% include 'header.html' %}
+
+    {% if sucesso %}
+    <h2>Oi!</h2>
+
+    {% else %}
+
     <form class="update" action="/update/{{registro.id}}" method="post">
         <div class="elemento">
             <label for="nome">Nome</label>
@@ -19,7 +25,7 @@
 
         <div class="elemento">
             <label for="descricaogeral">Descrição Geral</label>
-            <textarea name="descricaogeral" id="descricaogeral" cols="30" rows="10">{{registro.descricaogeral}}</textarea>
+            <input type="text" name="descricaogeral" value="{{registro.descricaogeral}}" id="descricaogeral descricao">
         </div>
 
         <div class="elemento">
@@ -59,6 +65,8 @@
         
         <button type="submit">Atualizar</button>        
     </form>
+
+    {% endif %}
 
 
 </body>
