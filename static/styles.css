@@ -8,4 +8,12 @@ body {
     text-align: center;
 }
 
+.botao {
+    background-color: rgb(53, 53, 53);
+    color: white;
+    text-decoration: none;
+    margin:2%;
+    padding: 1%;
+    border-radius: 10px;
+}
 

@@ -131,7 +131,10 @@ def update(id_registro):
     if request.method == 'POST':
         form = request.form
 
-        registro.update(form['nome'], form['imagem_url'])
+        registro.update(form['nome'], form['tipo'],
+                        form['niveldesafio'], form['descricaogeral'], form['ca'], form['pv'],
+                        form['deslocamento'], form['forca'], form['destreza'], form['constituicao'],
+                        form['inteligencia'], form['sabedoria'], form['carisma'])
 
         sucesso = True
 
