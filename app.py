@@ -34,12 +34,12 @@ class Bestas(db.Model):
     sabedoria = db.Column(db.Integer, nullable=False)
     carisma = db.Column(db.Integer, nullable=False)
 
-    def __init__(self, nome, tipo, niveldesafio, descricaoGeral, ca, pv, deslocamento, forca,
+    def __init__(self, nome, tipo, niveldesafio, descricaogeral, ca, pv, deslocamento, forca,
                  destreza, constituicao, inteligencia, sabedoria, carisma):
         self.nome = nome
         self.tipo = tipo
         self.niveldesafio = niveldesafio
-        self.descricaogeral = descricaoGeral
+        self.descricaogeral = descricaogeral
         self.ca = ca
         self.pv = pv
         self.deslocamento = deslocamento

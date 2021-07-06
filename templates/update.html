@@ -9,7 +9,63 @@
 </head>
 <body>
     {% include 'header.html' %}
-    
+    <form class="update" action="/update/{{registro.id}}" method="post">
+        <div class="elemento">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome">
+        </div>
+        <div class="elemento">
+            <label for="tipo">Tipo</label>
+            <input type="text" name="tipo" id="tipo">
+        </div>
+        <div class="elemento">
+            <label for="niveldesafio">Nivel do desafio</label>
+            <input type="number" name="niveldesafio" id="niveldesafio">
+        </div>
+        <div class="elemento">
+            <label for="descricaogeral">Descrição Geral</label>
+            <input type="text" name="descricaogeral" id="descricaogeral">
+        </div>
+        <div class="elemento">
+            <label for="ca">CA</label>
+            <input type="number" name="ca" id="ca">
+        </div>
+        <div class="elemento">
+            <label for="tipo">PV</label>
+            <input type="number" name="pv" id="pv">
+        </div>
+        <div class="elemento">
+        <label for="deslocamento">Deslocamento</label>
+        <input type="number" name="deslocamento" id="deslocamento">
+        </div>
+        <div class="elemento">
+            <label for="forca">Força</label>
+            <input type="number" name="forca" id="forca">
+        </div>
+        <div class="elemento">
+            <label for="destreza">Destreza</label>
+            <input type="number" name="destreza" id="destreza">
+        </div>
+        <div class="elemento">
+            <label for="constituicao">Constituição</label>
+            <input type="number" name="constituicao" id="constituicao">
+        </div>
+        <div class="elemento">
+            <label for="inteligencia">Inteligência</label>
+            <input type="number" name="inteligencia" id="inteligencia">
+        </div>
+        <div class="elemento">
+            <label for="sabedoria">Sabedoria</label>
+            <input type="number" name="sabedoria" id="sabedoria">
+        </div>
+        <div class="elemento">
+            <label for="carisma">Carisma</label>
+            <input type="number" name="carisma" id="carisma">
+        </div>
+        
+        <button type="submit">Atualizar</button>        
+    </form>
+
 
 </body>
 </html>

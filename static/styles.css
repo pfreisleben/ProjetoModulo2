@@ -8,7 +8,7 @@ body {
     text-align: center;
 }
 
-.botao {
+.botao-header {
     background-color: rgb(53, 53, 53);
     color: white;
     text-decoration: none;
@@ -16,4 +16,32 @@ body {
     padding: 1%;
     border-radius: 10px;
 }
+.botao {
+    text-decoration: none;
+    color: white;
+    background-color: gray;
+    padding: 1%;
+    border-radius: 5px;
+}
 
+.update {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.update .elemento {
+    margin-top: 15px;
+}
+.update label {
+    margin-right: 10px;
+}
+.update input,label {
+    display: block;
+}
+
+.update button {
+    margin-top: 15px;
+    width: 150px;
+}
