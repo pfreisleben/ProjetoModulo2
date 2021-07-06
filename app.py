@@ -115,7 +115,9 @@ def create():
     if request.method == 'POST':
 
         form = request.form
-        registro = Bestas(form['nome'], form['imagem_url'])
+        registro = Bestas(form['nome'], form['imagem_url'], form['niveldesafio'], form['descricaogeral'], form['ca'], form['pv'],
+                          form['deslocamento'], form['forca'], form['destreza'], form['constituicao'],
+                          form['inteligencia'], form['sabedoria'], form['carisma'])
         registro.save()
         novo_id = registro.id
 
