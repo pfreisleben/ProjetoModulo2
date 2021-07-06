@@ -12,55 +12,49 @@
     <form class="update" action="/update/{{registro.id}}" method="post">
         <div class="elemento">
             <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome">
-        </div>
-        <div class="elemento">
+            <input type="text" name="nome" id="nome" value="{{registro.nome}}">
             <label for="tipo">Tipo</label>
-            <input type="text" name="tipo" id="tipo">
+            <input type="text" name="tipo" id="tipo" value="{{registro.tipo}}">
         </div>
-        <div class="elemento">
-            <label for="niveldesafio">Nivel do desafio</label>
-            <input type="number" name="niveldesafio" id="niveldesafio">
-        </div>
+
         <div class="elemento">
             <label for="descricaogeral">Descrição Geral</label>
-            <input type="text" name="descricaogeral" id="descricaogeral">
+            <textarea name="descricaogeral" id="descricaogeral" cols="30" rows="10">{{registro.descricaogeral}}</textarea>
         </div>
+
         <div class="elemento">
+            <label for="niveldesafio">Nivel do desafio</label>
+            <input type="number" name="niveldesafio" id="niveldesafio" value="{{registro.niveldesafio}}">
             <label for="ca">CA</label>
-            <input type="number" name="ca" id="ca">
+            <input type="number" value="{{registro.ca}}" name="ca" id="ca">
         </div>
+
         <div class="elemento">
             <label for="tipo">PV</label>
-            <input type="number" name="pv" id="pv">
+            <input type="number" value="{{registro.pv}}" name="pv" id="pv">
+            <label for="deslocamento">Deslocamento</label>
+            <input type="number" value="{{registro.deslocamento}}" name="deslocamento" id="deslocamento">
         </div>
-        <div class="elemento">
-        <label for="deslocamento">Deslocamento</label>
-        <input type="number" name="deslocamento" id="deslocamento">
-        </div>
+
         <div class="elemento">
             <label for="forca">Força</label>
-            <input type="number" name="forca" id="forca">
-        </div>
-        <div class="elemento">
+            <input type="number" value="{{registro.forca}}" name="forca" id="forca">
             <label for="destreza">Destreza</label>
-            <input type="number" name="destreza" id="destreza">
+            <input type="number" value="{{registro.destreza}}" name="destreza" id="destreza">
         </div>
-        <div class="elemento">
-            <label for="constituicao">Constituição</label>
-            <input type="number" name="constituicao" id="constituicao">
-        </div>
+
         <div class="elemento">
             <label for="inteligencia">Inteligência</label>
-            <input type="number" name="inteligencia" id="inteligencia">
-        </div>
-        <div class="elemento">
+            <input type="number" value="{{registro.inteligencia}}" name="inteligencia" id="inteligencia">
             <label for="sabedoria">Sabedoria</label>
-            <input type="number" name="sabedoria" id="sabedoria">
+            <input type="number" value="{{registro.sabedoria}}" name="sabedoria" id="sabedoria">
         </div>
+
         <div class="elemento">
             <label for="carisma">Carisma</label>
-            <input type="number" name="carisma" id="carisma">
+            <input type="number" value="{{registro.carisma}}" name="carisma" id="carisma">
+            <label for="constituicao">Constituição</label>
+            <input type="number"  value="{{registro.constituicao}}" name="constituicao" id="constituicao">
         </div>
         
         <button type="submit">Atualizar</button>        

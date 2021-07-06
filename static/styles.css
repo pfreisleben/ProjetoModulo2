@@ -33,9 +33,13 @@ body {
 
 .update .elemento {
     margin-top: 15px;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
 }
 .update label {
     margin-right: 10px;
+    margin-left: 10px;
 }
 .update input,label {
     display: block;
@@ -44,4 +48,8 @@ body {
 .update button {
     margin-top: 15px;
     width: 150px;
+}
+.update #descricao {
+    width: 300px;
+    height: 150px;
 }
