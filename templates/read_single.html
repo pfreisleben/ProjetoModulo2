@@ -5,25 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualizar monstro {{registro['id']}}</title>
-    <link rel="stylesheet" href="/static/styles.css" />
+<link rel="stylesheet" href="/static/style-single.css">
 </head>
 <body>
-    {% include 'header.html' %}
+  {% include 'header.html' %}
+<section>
+  <nav class="container-img-nome">
+    <div class="icon-som" onclick="som.play()"><img src="static/icones/icon-volume2.png" width="30px"></div>
+    <audio src="/static/music/esqueleto_minotauro.wav" id="som"></audio>
     
-    <div class="bloco nome">
-        <h1> {{ registro.nome }}</h1>
+    <div class="cont-img">
+        <img src="{{registro.imagem_url}}" width="80%">
     </div>
-    <div class="ficha">
-      <div class="imagem-monstro">
+    <br /><br /><div class="nome"><h1>{{ registro.nome }}</h1></div>
+  </nav>
+  
+  <article class="cont-atrib-desc">
+    <header class="atributos">
+        <div class="cont-icon"><img class="icon" src="/static/images/icones/stone1.png" width="80%"><span class="habilidade">ability</span></div>
+        <div class="cont-icon"><img class="icon" src="/static/images/icones/stone2.png" width="80%"><span class="habilidade">ability</span></div>
+        <div class="cont-icon"><img class="icon" src="/static/images/icones/stone3.png" width="80%"><span class="habilidade">ability</span></div>
+        <div class="cont-icon"><img class="icon" src="/static/images/icones/stone4.png" width="80%"><span class="habilidade">ability</span></div>
+        <div class="cont-icon"><img class="icon" src="/static/images/icones/stone5.png" width="80%"><span class="habilidade">ability</span></div>
+        <div class="cont-icon"><img class="icon" src="/static/images/icones/stone6.png" width="80%"><span class="habilidade">ability</span></div>
+        <div class="cont-icon"><img class="icon" src="/static/images/icones/stone7.png" width="80%"><span class="habilidade">ability</span></div>
+        <div class="cont-icon"><img class="icon" src="/static/images/icones/stone8.png" width="80%"><span class="habilidade">ability</span></div>
+        <div class="cont-icon"><img class="icon" src="/static/images/icones/stone9.png" width="80%"><span class="habilidade">ability</span></div>
+        <div class="cont-icon"><img class="icon" src="/static/images/icones/stone9.1.png" width="80%"><span class="habilidade">ability</span></div>
+      </header>
+    <div class="descricao">
+        <p>Descrição: <br/><br/> {{registro.descricao}} </p>
 
-      </div>
-      <div class="propriedades">
-        <div class="atributos">
-
-        </div>
-        <div class="descricao"></div>
-      </div>
     </div>
+  </article>
+</section>
+<script>
+    let som = document.getElementById('som');
+</script>
 
 </body>
 </html>

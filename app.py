@@ -34,9 +34,10 @@ class Bestas(db.Model):
     sabedoria = db.Column(db.Integer, nullable=False)
     carisma = db.Column(db.Integer, nullable=False)
     imagem_url = db.Column(db.String(255), nullable=True)
+    nomesimplificado = db.Column(db.String(255), nullable=True)
 
     def __init__(self, nome, tipo, niveldesafio, descricaogeral, ca, pv, deslocamento, forca,
-                 destreza, constituicao, inteligencia, sabedoria, carisma, imagem_url):
+                 destreza, constituicao, inteligencia, sabedoria, carisma, imagem_url, nomesimplificado):
         self.nome = nome
         self.tipo = tipo
         self.niveldesafio = niveldesafio
@@ -51,6 +52,7 @@ class Bestas(db.Model):
         self.sabedoria = sabedoria
         self.carisma = carisma
         self.imagem_url = imagem_url
+        self.nomesimplificado = nomesimplificado
 
     @ staticmethod
     def read_all():
@@ -70,7 +72,7 @@ class Bestas(db.Model):
 
     def update(self, novo_nome, novo_tipo, novo_nivelDesafio, novo_descricaoGeral, novo_ca, novo_pv,
                novo_deslocamento, novo_forca, novo_destreza, novo_constituicao, novo_inteligencia,
-               novo_sabedoria, novo_carisma, novo_imagem_url):
+               novo_sabedoria, novo_carisma, novo_imagem_url, novo_nomesimplificado):
         self.nome = novo_nome
         self.tipo = novo_tipo
         self.niveldesafio = novo_nivelDesafio
@@ -85,6 +87,7 @@ class Bestas(db.Model):
         self.saedoria = novo_sabedoria
         self.carisma = novo_carisma
         self.imagem_url = novo_imagem_url
+        self.nomesimplificado = novo_nomesimplificado
 
         self.save()
 
@@ -120,7 +123,7 @@ def create():
         form = request.form
         registro = Bestas(form['nome'], form['tipo'], form['niveldesafio'], form['descricaogeral'], form['ca'], form['pv'],
                           form['deslocamento'], form['forca'], form['destreza'], form['constituicao'],
-                          form['inteligencia'], form['sabedoria'], form['carisma'], form['imagem_url'])
+                          form['inteligencia'], form['sabedoria'], form['carisma'], form['imagem_url'], form['nomesimplificado'])
         registro.save()
         novo_id = registro.id
 
@@ -139,7 +142,8 @@ def update(id_registro):
         registro.update(form['nome'], form['tipo'],
                         form['niveldesafio'], form['descricaogeral'], form['ca'], form['pv'],
                         form['deslocamento'], form['forca'], form['destreza'], form['constituicao'],
-                        form['inteligencia'], form['sabedoria'], form['carisma'], form['imagem_url'])
+                        form['inteligencia'], form['sabedoria'], form['carisma'], form['imagem_url'],
+                        form['nomesimplificado'])
 
         sucesso = True
 
