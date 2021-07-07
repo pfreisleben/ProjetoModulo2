@@ -25,11 +25,9 @@ body {
 
 .update {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
     margin: auto;
     border-radius: 15px;
     background-color: rgb(206, 206, 206);

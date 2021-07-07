@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualizar monstro {{registro['id']}}</title>
 <link rel="stylesheet" href="/static/style-single.css">
+<link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
   {% include 'header.html' %}
 <section>
   <nav class="container-img-nome">
     <div class="icon-som" onclick="som.play()"><img src="static/icones/icon-volume2.png" width="30px"></div>
-    <audio src="/static/music/esqueleto_minotauro.wav" id="som"></audio>
+    <audio src="/static/music/{{registro.nomesimplificado}}.wav" id="som"></audio>
     
     <div class="cont-img">
         <img src="{{registro.imagem_url}}" width="80%">
