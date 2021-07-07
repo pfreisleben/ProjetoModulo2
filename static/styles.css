@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
 body {
     margin: 15px;
-    background-color: #F0D4A5;
+    background: url(/static/images/paperBGdd.png);
     font-family: 'Montserrat', sans-serif;
 }
 

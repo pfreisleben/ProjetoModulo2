@@ -1,4 +1,5 @@
-CREATE TABLE bestas (
+
+CREATE TABLE public.bestas (
 	id serial NOT NULL,
 	nome varchar(255) NOT NULL,
 	tipo varchar(255) NOT NULL,
@@ -14,5 +15,6 @@ CREATE TABLE bestas (
 	sabedoria int4 NOT NULL,
 	carisma int4 NOT NULL,
 	imagem_url varchar NULL,
+	nomesimplificado varchar NULL,
 	CONSTRAINT bestas_pkey PRIMARY KEY (id)
 );
