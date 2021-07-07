@@ -30,17 +30,20 @@ body {
 
 .tabela tr:nth-child(even) a {
     text-decoration: none;
-    background-color: rgb(224, 0, 213);
-    padding: 10px;
-    border-radius: 4px;
+    background-color: rgb(224, 213, 213);
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .tabela tr:nth-child(odd) a {
     text-decoration: none;
-    background-color: rgb(0, 0, 213);
-    padding: 10px;
-    border-radius: 4px;
+    background-color: rgb(158, 40, 40);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
 }
+
 
 
 .update {
@@ -73,7 +76,7 @@ body {
 }
 
 .tabela{
-    border: 1px solid #adadad;
+    border: 1px solid #443a3a;
     border-spacing: 0;
     margin: 0 50px 20px;
     width: 100%;
