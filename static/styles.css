@@ -20,29 +20,6 @@ body {
     border-radius: 10px;
 }
 
-.tabela:nth-child(even)   {
-    text-decoration: none;
-    color: rgb(61, 61, 61);
-    background-color: rgb(224, 213, 213);
-    padding: 1%;
-    border-radius: 5px;
-}
-
-.tabela tr:nth-child(even) a {
-    text-decoration: none;
-    background-color: rgb(224, 213, 213);
-    color: black;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.tabela tr:nth-child(odd) a {
-    text-decoration: none;
-    background-color: rgb(158, 40, 40);
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
-}
 
 
 
@@ -76,14 +53,38 @@ body {
 }
 
 .tabela{
-    border: 1px solid #443a3a;
     border-spacing: 0;
     margin: 0 50px 20px;
     width: 100%;
 }
+.tabela:nth-child(even)   {
+    text-decoration: none;
+    color: rgb(61, 61, 61);
+    background-color: rgb(224, 213, 213);
+    padding: 1%;
+    border-radius: 5px;
+}
+
+.tabela tr:nth-child(even) a {
+    text-decoration: none;
+    background-color: rgb(224, 213, 213);
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.tabela tr:nth-child(odd) a {
+    text-decoration: none;
+    background-color: rgb(158, 40, 40);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 
 .tabela tr:nth-child(even) td{
     background-color: rgb(158, 40, 40);
+    color: white;
 }
 .tabela tr:nth-child(odd) td{
     background-color: rgb(224, 213, 213);
