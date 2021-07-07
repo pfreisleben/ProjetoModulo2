@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("Background3.jpg");
+  background-size: 100%;
+  font-family: 'MedievalSharp', cursive;
+  font-size: 15pt;
+}
+
+header {
+  margin: 0;
+  height: 17%;
+  background-color: #666;
+  padding: 0px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container-img-nome {
+  margin-left: 5%;
+  margin-top: 5%;
+  float: left;
+  width: 30%;
+  height: 80%; 
+  background: rgb(39, 8, 8);
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 20px black;
+}
+
+.atributos {
+    background-image: url("stoneBGdd.png");
+    background-size: auto;
+}
+
+.cont-atrib-desc {
+  float: left;
+  width: 60%;
+  height: 80%;
+  margin-top: 5%;
+  background-image: url("paperBGdd.png");
+  background-size: 100%;
+  box-shadow: 0 0 20px black;
+}
+.icon{margin: 7%;}
+.icon:hover {opacity: 85%;}
+.icon-som {
+        position: absolute;
+        top: 15%;
+        left: 7%;
+        cursor: pointer;
+        z-index: 2;
+    }
+.cont-icon {
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.descricao {
+    margin: 8%;
+    color: rgb(24, 15, 0);
+}
+.habilidade {
+    background-color: rgb(65, 8, 8);
+    opacity: 90%;
+    padding: 3%;
+    border-radius: 3px;
+    color: rgb(207, 207, 207);
+    font-size: 12pt;
+}
+.nome{font-weight: bold;}
