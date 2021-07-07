@@ -51,8 +51,8 @@ header {
 .icon:hover {opacity: 85%;}
 .icon-som {
         position: absolute;
-        top: 15%;
-        left: 7%;
+        top: 58%;
+        left: 8%;
         cursor: pointer;
         z-index: 2;
     }
