@@ -19,10 +19,10 @@ body {
     padding: 1%;
     border-radius: 10px;
 }
-.botao {
+.tabela tr:nth-child(2) .botao {
     text-decoration: none;
-    color: white;
-    background-color: gray;
+    color: rgb(61, 61, 61);
+    background-color: rgb(224, 213, 213);
     padding: 1%;
     border-radius: 5px;
 }
@@ -55,4 +55,24 @@ body {
     height: 150px;
     word-break: break-word;
 }
+.tabela{
+    border: 1px solid #adadad;
+    border-spacing: 0;
+    margin: 0 50px 20px;
+    width: 100%;
+}
 
+.tabela tr:nth-child(even) td{
+    background-color: rgb(158, 40, 40);
+}
+.tabela tr:nth-child(odd) td{
+    background-color: rgb(224, 213, 213);
+}
+
+.tabela td{
+    padding: 10px;
+}
+
+.tabela_header td{
+    font-weight: bold;
+}
