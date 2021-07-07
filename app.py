@@ -72,7 +72,7 @@ class Bestas(db.Model):
         self.nome = novo_nome
         self.tipo = novo_tipo
         self.niveldesafio = novo_nivelDesafio
-        self.descricaoGeral = novo_descricaoGeral
+        self.descricaogeral = novo_descricaoGeral
         self.ca = novo_ca
         self.pv = novo_pv
         self.deslocamento = novo_deslocamento
@@ -115,7 +115,7 @@ def create():
     if request.method == 'POST':
 
         form = request.form
-        registro = Bestas(form['nome'], form['imagem_url'], form['niveldesafio'], form['descricaogeral'], form['ca'], form['pv'],
+        registro = Bestas(form['nome'], form['tipo'], form['niveldesafio'], form['descricaogeral'], form['ca'], form['pv'],
                           form['deslocamento'], form['forca'], form['destreza'], form['constituicao'],
                           form['inteligencia'], form['sabedoria'], form['carisma'])
         registro.save()

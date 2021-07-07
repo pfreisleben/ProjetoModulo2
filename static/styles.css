@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
 body {
-    margin: 0;
+    margin: 15px;
     background-color: #F0D4A5;
     font-family: 'Montserrat', sans-serif;
 }
@@ -19,13 +19,29 @@ body {
     padding: 1%;
     border-radius: 10px;
 }
-.tabela tr:nth-child(2) .botao {
+
+.tabela:nth-child(even)   {
     text-decoration: none;
     color: rgb(61, 61, 61);
     background-color: rgb(224, 213, 213);
     padding: 1%;
     border-radius: 5px;
 }
+
+.tabela tr:nth-child(even) a {
+    text-decoration: none;
+    background-color: rgb(224, 0, 213);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.tabela tr:nth-child(odd) a {
+    text-decoration: none;
+    background-color: rgb(0, 0, 213);
+    padding: 10px;
+    border-radius: 4px;
+}
+
 
 .update {
     display: flex;
@@ -55,6 +71,7 @@ body {
     height: 150px;
     word-break: break-word;
 }
+
 .tabela{
     border: 1px solid #adadad;
     border-spacing: 0;
