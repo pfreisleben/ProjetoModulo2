@@ -1,3 +1,8 @@
+# Integrantes: Pedro Freisleben, Wagner Cardoso Rodrigues, Filipe Mascarenhas Paiva
+# A ideia era montar um bestiário com monstros do jogo de RPG Dungeons & Dragons
+# No desenvolvimento, começamos a modelar primeiro o banco de dados, criando as tabelas
+# definindo os campos dos elementos, depois estruturamos o back-end, os endpoints e
+# modelagem do banco no SQLAlchemy, e por fim fizalizamos pelo Front-End.
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
