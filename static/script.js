@@ -1,2 +1,5 @@
 let som = document.getElementById('som');
-som.volume = 0.5;
+console.log(som);
+som.volume = 0.6;
+let somMonstro = document.getElementById('sommonstro');
+console.log(somMonstro);
