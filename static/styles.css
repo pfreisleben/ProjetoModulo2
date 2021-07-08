@@ -102,3 +102,4 @@ body {
 .tabela_header td{
     font-weight: bold;
 }
+button{border:none; background: none; cursor: pointer;}
